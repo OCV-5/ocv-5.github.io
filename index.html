@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OCV Travel — Map</title>
+
+<!-- Root redirect for ocv-5.github.io
+     The map itself lives in the OCVTravel-Map repo and is published by MapSite.
+     This file exists only so the BARE DOMAIN works, because Facebook (and other
+     apps that rewrite links) drop or lowercase the path and land people on a
+     GitHub 404. Nothing here needs updating when the map rebuilds. -->
+
+<link rel="canonical" href="https://ocv-5.github.io/OCVTravel-Map/">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=/OCVTravel-Map/">
+
+<style>
+  html,body{height:100%}
+  body{
+    margin:0;display:flex;align-items:center;justify-content:center;
+    background:#1E2730;color:#F5F1E8;text-align:center;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+    padding:24px;
+  }
+  a{color:#E8762C}
+</style>
+</head>
+<body>
+
+<p>
+  Taking you to the map…<br>
+  <a href="/OCVTravel-Map/">Tap here if nothing happens.</a>
+</p>
+
+<script>
+/* Belt and braces. The meta refresh above fires on its own, but some in-app
+   browsers sit on it. replace() rather than assign() keeps this page out of the
+   back-button history, so "back" from the map leaves instead of bouncing here
+   and redirecting again. Any ?query or #hash is carried through. */
+(function () {
+  var target = '/OCVTravel-Map/' + window.location.search + window.location.hash;
+  window.location.replace(target);
+})();
+</script>
+
+</body>
+</html>
